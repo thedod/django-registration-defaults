@@ -1,6 +1,7 @@
 {% extends "registration/registration_base.html" %}
 {% block title %}Register for an account{% endblock %}
 {% block content %}
+<h3 class="title">Register for an account</h3><hr class="clear">
 <table>
     <form method='post' action=''>{% csrf_token %}
         {{ form }}
