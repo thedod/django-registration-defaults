@@ -4,15 +4,20 @@ if you use a django-registration backend that looks for it. e.g.
 https://github.com/huseyinyilmaz/django-registration-extended-backend
 {% endcomment %}<body>
 <h3>Account registration for {{ site.name }}</h3>
+<p>
 You (or someone pretending to be you) have asked to register an account at 
 <b>{{ site.name }}</b>.  If this wasn't you, please ignore this email
 and your address will be removed from our records.
-
+</p>
+<p>
 To activate this account, please click the following link within the next 
 <b>{{ expiration_days }}</b> days:
-
+</p>
+<p>
 <a href="https://{{site.domain}}{% url registration_activate activation_key %}">https://{{site.domain}}{% url registration_activate activation_key %}</a>
-
-Sincerely,
+</p>
+<p>
+Sincerely,<br/>
 {{ site.name }} Management
+</p>
 </body>
