@@ -1,7 +1,7 @@
 {% extends "registration/registration_base.html" %}
-{% block title %}Login{% endblock %}
+{% block title %}Sign in{% endblock %}
 {% block content %}
-<h3 class="title">Login</h3><hr class="clear">
+<h3 class="title">Sign in</h3><hr class="clear">
 
 {% if form.errors %}
 <p>Your username and password didn't match. Please try again.</p>
@@ -18,9 +18,12 @@
     <td>{{ form.password }}</td>
 </tr>
 </table>
-<p><a href="{% url auth_password_reset %}">Forgot</a> your password?  <a href="{% url registration_register %}">Need an account</a>?</p>
+<p>
+  Not a member? <a href="{% url registration_register %}">Join us</a>.<br>
+  <a href="{% url auth_password_reset %}">Forgot</a> your password?
+</p>
 
-<input type="submit" value="login" />
+<input type="submit" value="Sign in" />
 <input type="hidden" name="next" value="{{ next }}" />
 </form>
 

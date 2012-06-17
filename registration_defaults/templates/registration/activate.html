@@ -3,7 +3,7 @@
 {% block content %}
 {% if account %}
 <h3 class="title">Activation complete</h3><hr class="clear">
-Thanks {{ account }}, activation complete!  You may now <a href='{% url auth_login %}'>login</a> using the username and password you set at registration.
+Thanks {{ account }}, activation complete!  You may now <a href='{% url auth_login %}'>sign in</a> using the username and password you set at registration.
 {% else %}
 <h3 class="title">Activation problem</h3><hr class="clear">
 Oops &ndash; it seems that your activation key is invalid.  Please check the url again.
