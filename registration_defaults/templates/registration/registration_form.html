@@ -1,6 +1,12 @@
 {% extends "registration/registration_base.html" %}
 {% load i18n %}
 {% block title %}{% trans "Register for an account" %}{% endblock %}
+{% block extrastyle %}
+  <style type="text/css">
+    table input[type='text'], table input[type='password'] { direction:ltr }
+    th { text-align:{% if LANGUAGE_BIDI %}right{% else %}left{% endif %}
+  </style>
+{% endblock %}
 {% block content %}
 <h3 class="title">{% trans "Register for an account" %}</h3><hr class="clear">
 <table>
