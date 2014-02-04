@@ -1,0 +1,18 @@
+{% extends "registration/registration_base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% block header %}
+  <div class="page-header"><h1>{% trans "Register for an account" %}</h1></div>
+{% endblock %}
+{% block extrastyle %}
+  <style type="text/css">
+    form input[type='text'], form input[type='password'] { direction:ltr }
+  </style>
+{% endblock %}
+{% block content %}
+    <form method='post' action=''>{% csrf_token %}
+        {{ form|crispy }}
+        <input class="btn btn-primary form-control" type="submit" value="{% trans "Send activation email" %}" />
+    </form>
+</table>
+{% endblock %}
